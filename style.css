@@ -34,7 +34,9 @@
     color: #725b5b;
     font-weight: bold;
 }
-
+.btnAgregar{
+    text-decoration: none;
+}
 .main { /* carteles de productos */
     width: 60%;
     margin: auto;
@@ -60,7 +62,7 @@ section h1 { /* esto es el icono del carrito*/
     height: 50px;
     border-radius: 10px;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
     background: url("./img/carrito.png") no-repeat ;
     background-size: 60%;
     background-position: 9px center;
@@ -68,8 +70,6 @@ section h1 { /* esto es el icono del carrito*/
 
 section h1 span { /*circulo con el numero de elementos*/
     display: block;
-    background-color: #d15280;
-    border-radius: 150px;
     padding: 5px;
     width: 30px;
     text-align: center;
@@ -117,16 +117,20 @@ section h1 span { /*circulo con el numero de elementos*/
     outline: none;
     font-size: 16px;
 }
-
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Esto centra verticalmente */
+}
 .producto {
     border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
     text-align: center;
     display: inline-block;
-    vertical-align: top; 
-    width: 200px; 
-    box-sizing: border-box; 
+    margin: 10px auto;
+    box-sizing: border-box;
 }
 
 .producto img {

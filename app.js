@@ -89,7 +89,7 @@ class Carrito{
                 <h2>${producto.nombre}</h2>
                 <p>$${producto.precio}</h2>
                 <p>Cantidad: ${producto.cantidad}
-                <a href="#" class="btnQuitar" data-id="${producto.id}">Quitar del carrito</a>
+                <a href="#" class="btnQuitar" data-id="${producto.id}"> <img src="./img/papelera.png" width=10% alt="Eliminar"></a>
             </div>
             `;
             this.total += producto.precio * producto.cantidad;
@@ -141,7 +141,7 @@ function cargarProductos(productos){
                 <img src="img/${producto.imagen}" width="100" >
             </div>
 
-            <a href="#" class="btnAgregar" data-id="${producto.id}"> Agregar al carrito </a>
+            <a href="#" class="btnAgregar" data-id="${producto.id}"> comprar </a>
         </div>
         `;
     }
