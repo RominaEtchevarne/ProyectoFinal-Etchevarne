@@ -29,6 +29,12 @@
         <div class="container">
     <div class="search-container">
         <input id="inputBuscar" type="text" placeholder="Buscar productos...">
+    <ul>
+        <li class="boton btnCategoria" data-categoria="Vinos blanco">Vinos blancos</li>
+        <li class="boton btnCategoria" data-categoria="Vinos">Vinos </li>
+        <li class="boton btnCategoria" data-categoria="Vinos de reserva">Vinos de reserva</li>
+        <li class="boton btnCategoria" data-categoria="Todos">Todos</li>
+    </ul>
     </div>
 
         <div id="productos">
@@ -50,8 +56,11 @@
             </div>
         </div>
         <h2>Total: $ <span id="totalCarrito">0</span></h2>
-        
+        <a href="#" id="botonComprar" class="boton" style="width: 100%; text-align: center;" >Comprar</a>
+
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="app.js"></script>
 </body>
 </html>

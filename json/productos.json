@@ -1,0 +1,29 @@
+[
+    {
+        "id" : 1,
+        "nombre": "Vino blanco",
+        "precio": 1.149,
+        "categoria": "Vinos blanco",
+        "imagen": "vino-blanco-chardonnay.png"
+    },
+
+    {
+
+            "id" : 2,
+            "nombre": "Cabernet",
+            "precio": 789,
+            "categoria": "Vinos de reserva",
+            "imagen": "vino-cabernet.png"
+    
+    },
+
+    {
+
+            "id" : 3,
+            "nombre": "Merlot",
+            "precio": 2.619,
+            "categoria": "Vinos",
+            "imagen": "vino-merlot.png"
+
+    }
+]
