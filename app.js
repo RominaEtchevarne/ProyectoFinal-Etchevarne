@@ -15,9 +15,11 @@ class BaseDeDatos {
     }
 
     async cargarRegistros(){
+        mostrarLoader();
         const resultado = await fetch("./json/productos.json");
         this.productos = await resultado.json();
         cargarProductos(this.productos);
+        Swal.close();
     }
 
     traerRegistros(){
@@ -29,8 +31,11 @@ class BaseDeDatos {
     }
 
     registrosPorNombre(palabra){
+        mostrarLoader();
+
         return this.productos.filter((producto) => 
         producto.nombre.toLowerCase().includes(palabra.toLowerCase()));
+        Swal.close();
     }
 
 
@@ -190,23 +195,44 @@ function cargarProductos(productos){
 
             Toastify({
                 text: `Se ha añadido ${producto.nombre} al carrito`,
-                gravity: "bottom",
-                position: "center",
+                duration: 1000,
+                gravity: "top",
+                position: "right",
                 className: "info",
                 style: {
-                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                    background: "linear-gradient(to right, #E3E7B3, #E4CE8E)",
                 }
             }).showToast();
         });
     }
 }
 
+function mostrarLoader(){
+    Swal.fire({
+        title: "Cargando",
+        html: "Estamos buscando productos..",
+        timer: 1000,
+        timerProgressBar: true,
+        didOpen: ()=>{
+            Swal.showLoading();
+        }
+    });
+}
+
+let searchTimer;
+
+
 // buscador
 inputBuscar.addEventListener("input", (event) => {
     event.preventDefault();
     const palabra = inputBuscar.value;
-    const productos = bd.registrosPorNombre(palabra);
+    clearTimeout(searchTimer);
+
+    searchTimer= setTimeout (() =>{
+        const productos = bd.registrosPorNombre(palabra);
     cargarProductos(productos);
+    }, 1000)
+    
 });
 
 botonCarrito.addEventListener("click", (event) =>{
