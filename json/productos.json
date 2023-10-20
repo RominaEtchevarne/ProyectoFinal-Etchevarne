@@ -1,29 +1,152 @@
 [
     {
         "id" : 1,
-        "nombre": "Vino blanco",
-        "precio": 1.149,
-        "categoria": "Vinos blanco",
-        "imagen": "vino-blanco-chardonnay.png"
+        "nombre": "Vino Garzón Estate Cabernet De Corte 750 ml",
+        "precio": 450,
+        "categoria": "Vinos",
+        "imagen": "cabernet-de-corte.png"
     },
 
     {
 
-            "id" : 2,
-            "nombre": "Cabernet",
-            "precio": 789,
-            "categoria": "Vinos de reserva",
-            "imagen": "vino-cabernet.png"
+        "id" : 2,
+        "nombre": "Cabernet Vino Garzón Estate Sauvignon Blanc De Corte 750 ml",
+        "precio": 400,
+        "categoria": "Vinos",
+        "imagen": "Sauvignon-blanc.png"
     
     },
 
     {
+        "id": 3,
+        "nombre": "Vino Garzón Cabernet Franc Reserva 750 ml",
+        "precio": 589,
+        "categoria": "Vinos",
+        "imagen": "cabernet-franc-reserva.png"
+    },
 
-            "id" : 3,
-            "nombre": "Merlot",
-            "precio": 2.619,
-            "categoria": "Vinos",
-            "imagen": "vino-merlot.png"
+    {
+        "id" : 4,
+        "nombre": "Vino Don Pascual Tinto Tannat 750ml",
+        "precio": 260,
+        "categoria": "Vinos",
+        "imagen": "tannat.png"
 
+    },
+
+    {
+        "id": 5,
+        "nombre": "Vino Don Pascual Cabernet-Sauvignon 750ml", 
+        "precio": 300,
+        "categoria": "Vinos",
+        "imagen": "Cabernet-Sauvignon.png"
+    },
+
+    {
+        "id": 6,
+        "nombre": "Vino Don Pascual Bivarietal Blanc de Blancs 750 ml", 
+        "precio": 260,
+        "categoria": "Vinos",
+        "imagen": "Bivarietal-Blanc.png"
+    },
+
+    {
+        "id": 7,
+        "nombre": "Ron / Licor Malibú de 750 ml" ,
+        "precio": 749 ,
+        "categoria": "Licores",
+        "imagen": "ron-malibu.png"
+    },
+
+    {
+        "id": 8,
+        "nombre": "Licor Sheridan´s 700 ml",
+        "precio": 1.149,
+        "categoria": "Licores",
+        "imagen": "sheridans.png"
+    },
+
+    {
+        "id": 9,
+        "nombre": "Licor alemán Jagermeister de 700 ml",
+        "precio":930,
+        "categoria": "Licores",
+        "imagen": "espirituoso-jagermeister.png"
+
+    },
+
+    {
+        "id": 10,
+        "nombre": "Botella Whisky Johnnie Walker Red Label Litro",
+        "precio": 1.022,
+        "categoria": "Whisky",
+        "imagen": "whisky.png"
+    },
+
+    {
+        "id": 11,
+        "nombre": "Botella Whisky Sandy Mac Litro",
+        "precio": 921,
+        "categoria": "Whisky",
+        "imagen": "whisky-sandy.png"
+    },
+
+    {
+        "id": 12,
+        "nombre": "Botella Whisky Johnnie Walker Black Label Litro",
+        "precio": 2.088,
+        "categoria": "Whisky",
+        "imagen": "jhnnie-negro.png"
+    },
+
+    {
+        "id": 13,
+        "nombre":"Whisky Ballantines litro",
+        "precio":959,
+        "categoria": "Whisky",
+        "imagen": "ballantines.png"
+    },
+
+    {
+        "id": 14,
+        "nombre": "Botella Whisky Vat 69 Litro",
+        "precio": 629,
+        "categoria": "Whisky",
+        "imagen": "vat-69.png"
+    },
+
+    {
+        "id": 15,
+        "nombre": "Botella Ron Bacardí Oro 700 cc",
+        "precio": 659,
+        "categoria": "Ron",
+        "imagen": "botella-bacardi.png"
+    },
+
+    {
+        "id": 16,
+        "nombre": "Ron Barceló Gran Añejo 750 ml",
+        "precio": 826,
+        "categoria":"Ron",
+        "imagen": "ron-barcelo.png"
+    },
+
+    {
+        "id": 17,
+        "nombre": "Botella Ron Capitán Morgan Gold 750 cc",
+        "precio": 561,
+        "categoria":"Ron",
+        "imagen": "ron-capitan.png"
+    },
+
+    {
+        "id": 18,
+        "nombre": "Ron Botran 12 Años 750 ml",
+        "precio": 1.312,
+        "categoria":"Ron",
+        "imagen": "botran.png"
     }
+
 ]
+
+

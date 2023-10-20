@@ -165,8 +165,10 @@ section h1 span { /* numero de elementos*/
 }
 
 .producto img {
-    max-width: 100%;
-    height: auto;
+    width: 50%;
+    height: 50px;
+    
+
 }
 
 .producto h2 {
@@ -182,3 +184,20 @@ section h1 span { /* numero de elementos*/
 
 
 
+
+
+/* Style for product containers */
+.product {
+    width: 250px; /* Set the desired width */
+    margin: 10px; /* Add some margin to separate products */
+    display: inline-block; /* Ensure products appear in a row */
+    border: 1px solid #ddd; /* Add a border to visually separate products */
+    padding: 10px; /* Add some padding for better presentation */
+    text-align: center;
+}
+
+/* Style for product images */
+.product .imagen img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto;
+}

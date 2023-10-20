@@ -173,7 +173,7 @@ function cargarProductos(productos){
             <h2>${producto.nombre}</h2>
             <p class="precio">$${producto.precio}</p>
             <div class="imagen">
-                <img src="img/${producto.imagen}" width="100" >
+                <img src="img/${producto.imagen}" width="100px" >
             </div>
 
             <a href="#" class="btnAgregar" data-id="${producto.id}"> comprar </a>
