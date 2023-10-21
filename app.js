@@ -197,7 +197,7 @@ function cargarProductos(productos){
                 text: `Se ha añadido ${producto.nombre} al carrito`,
                 duration: 1000,
                 gravity: "top",
-                position: "right",
+                position: "center",
                 className: "info",
                 style: {
                     background: "linear-gradient(to right, #E3E7B3, #E4CE8E)",
