@@ -245,6 +245,8 @@ botonCarrito.addEventListener("click", (event) =>{
     document.querySelector("section").classList.toggle("ocultar");
 });
 
+
+
 botonComprar.addEventListener("click", (event)=> {
     event.preventDefault();
     Swal.fire({
@@ -256,12 +258,31 @@ botonComprar.addEventListener("click", (event)=> {
     }).then((result) =>{
         if (result.isConfirmed){
                 carrito.vaciar();
-                actualizarTotal();
         Swal.fire({
             title: "¡Compra realizada!",
             icon: "success",
             title: "Su compra fue realizada con éxito",
         });
+        actualizarTotal();
 }
+    });
+});
+
+// Obtenemos el botón y lo mostramos cuando se desplaza hacia abajo
+const scrollToTopButton = document.getElementById("scrollToTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+        scrollToTopButton.style.display = "block";
+    } else {
+        scrollToTopButton.style.display = "none";
+    }
+});
+
+// Al hacer clic en el botón, volvemos al principio de la página suavemente
+scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Hace que la animación sea suave
     });
 });

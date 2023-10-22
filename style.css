@@ -233,3 +233,17 @@ section h1 span { /* numero de elementos*/
     align-items: center;
     padding: 10px;
 }
+
+#scrollToTopBtn {
+    display: none; /* Oculta el botón inicialmente */
+    position: fixed;
+    right: 20px;
+    z-index: 1;
+    background: url(./img/flecha.png) no-repeat;
+    cursor: pointer;
+    padding: 30px;
+    border: none; /* Quita el borde */
+    background-color: transparent; /* Establece el fondo transparente */
+
+}
+
