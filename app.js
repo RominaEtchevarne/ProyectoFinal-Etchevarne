@@ -1,3 +1,4 @@
+
 class Producto{
     constructor(id, nombre, precio, categoria, imagen){
         this.id = id;
@@ -7,7 +8,7 @@ class Producto{
         this.imagen = imagen;
     }
 }
-
+// todos los productos del catálogo
 class BaseDeDatos {
     constructor(){
         this.productos = [];
@@ -42,24 +43,17 @@ class BaseDeDatos {
     registrosPorCategoria(categoria) {
     return this.productos.filter((producto) => producto.categoria == categoria);
     }
-
 }
-
-
 
 class Carrito{
     constructor(){
-        
         const carritoStorage = JSON.parse(localStorage.getItem("carrito"));
         this.carrito = carritoStorage || [];
-        this.total = 0; // suma total de los precios de todos los productos
-        this.cantidadProductos = 0; // cantidad de productos en el carrito
+        this.total = 0; 
+        this.cantidadProductos = 0; 
         this.listar();
     }
     
-
-
-
     estaEnCarrito({id}){
         return this.carrito.find((producto) => producto.id === id);
     }
@@ -67,7 +61,6 @@ class Carrito{
 // agregar al carrito
     agregar(producto){
         const productoEnCarrito = this.estaEnCarrito(producto);
-
         if (!productoEnCarrito){
             this.carrito.push({ ...producto, cantidad: 1});
         }else{
@@ -78,7 +71,7 @@ class Carrito{
         this.listar();
     }
 
-    // quitar del carrito
+// quitar del carrito
     quitar(id){
         const indice = this.carrito.findIndex((producto) => producto.id === id);
 
@@ -109,7 +102,11 @@ class Carrito{
             <div class="productoCarrito">
                 <h2>${producto.nombre}</h2>
                 <p>$${producto.precio}</h2>
+                <div class="imagen">
+                <img src="img/${producto.imagen}" width="50px">
+            </div>
                 <p>Cantidad: ${producto.cantidad}
+                
                 <a href="#" class="btnQuitar" data-id="${producto.id}"> <img src="./img/papelera.png" width=10% alt="Eliminar"></a>
             </div>
             `;
@@ -134,13 +131,8 @@ class Carrito{
         }
         spanCantidadProductos.innerText = this.cantidadProductos;
         spanTotalCarrito.innerText = this.total;
-
     }
 }
-
-
-
-
 
 // elementos
 const spanCantidadProductos = document.querySelector("#cantidadProductos");
@@ -166,12 +158,10 @@ botonesCategoria.forEach((boton) => {
     });
 });
 
-
 cargarProductos(bd.traerRegistros());
 
 function cargarProductos(productos){
     divProductos.innerHTML = "";
-
 
     for (const producto of productos){
         divProductos.innerHTML += `
@@ -181,22 +171,18 @@ function cargarProductos(productos){
             <div class="imagen">
                 <img src="img/${producto.imagen}" width="100px" >
             </div>
-
             <a href="#" class="btnAgregar" data-id="${producto.id}"> comprar </a>
         </div>
         `;
     }
 
     const botonesAgregar = document.querySelectorAll(".btnAgregar");
-
     for (const boton of botonesAgregar){
         boton.addEventListener("click", (event) =>{
             event.preventDefault();
 
-            const idProducto = +boton.dataset.id; 
-
+            const idProducto = +boton.dataset.id;
             const producto = bd.registroPorId(idProducto);
-            
             carrito.agregar(producto);
 
             Toastify({
@@ -227,7 +213,6 @@ function mostrarLoader(){
 
 let searchTimer;
 
-
 // buscador
 inputBuscar.addEventListener("input", (event) => {
     event.preventDefault();
@@ -241,12 +226,12 @@ inputBuscar.addEventListener("input", (event) => {
     
 });
 
+
 botonCarrito.addEventListener("click", (event) =>{
     document.querySelector("section").classList.toggle("ocultar");
 });
 
-
-
+// Botón comprar
 botonComprar.addEventListener("click", (event)=> {
     event.preventDefault();
     Swal.fire({
@@ -268,21 +253,21 @@ botonComprar.addEventListener("click", (event)=> {
     });
 });
 
-// Obtenemos el botón y lo mostramos cuando se desplaza hacia abajo
-const scrollToTopButton = document.getElementById("scrollToTopBtn");
+// Botón, se muestra cuando se desplaza hacia abajo
+const scrollTop = document.getElementById("scrollTop");
 
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
-        scrollToTopButton.style.display = "block";
+        scrollTop.style.display = "block";
     } else {
-        scrollToTopButton.style.display = "none";
+        scrollTop.style.display = "none";
     }
 });
 
-// Al hacer clic en el botón, volvemos al principio de la página suavemente
-scrollToTopButton.addEventListener("click", () => {
+//Clic en el botón, vuelve al principio de la página 
+scrollTop.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
-        behavior: "smooth" // Hace que la animación sea suave
+        behavior: "smooth"
     });
 });

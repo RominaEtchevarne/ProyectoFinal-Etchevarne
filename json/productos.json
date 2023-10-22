@@ -8,13 +8,11 @@
     },
 
     {
-
         "id" : 2,
         "nombre": "Cabernet Vino Garzón Estate Sauvignon Blanc De Corte 750 ml",
         "precio": 400,
         "categoria": "Vinos",
         "imagen": "Sauvignon-blanc.png"
-    
     },
 
     {
@@ -31,7 +29,6 @@
         "precio": 260,
         "categoria": "Vinos",
         "imagen": "tannat.png"
-
     },
 
     {
@@ -72,7 +69,6 @@
         "precio":930,
         "categoria": "Licores",
         "imagen": "espirituoso-jagermeister.png"
-
     },
 
     {
