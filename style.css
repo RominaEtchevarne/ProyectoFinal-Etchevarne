@@ -61,7 +61,10 @@
     outline: none;
     font-size: 16px;
 }
-
+.fondo{
+    background-color: #725b5b;
+    width: 100%;
+}
 
 
 .btnAgregar{
@@ -115,17 +118,18 @@ section {
 }
 section h1 { /*  icono del carrito*/
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 360px;
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 10px;
     cursor: pointer;
-    color: rgb(0, 0, 0);
     background: url("./img/carrito.png") no-repeat ;
     background-size: 60%;
-    background-position: 9px center;
+    background-position: 15px center;
+    
+    
 }
 
 section h1 span { /* numero de elementos*/
@@ -133,7 +137,7 @@ section h1 span { /* numero de elementos*/
     padding: 5px;
     width: 30px;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     margin: -10px 0 0 30px;
 }
 
@@ -161,6 +165,8 @@ section h1 span { /* numero de elementos*/
     align-items: center;
 }
 
+
+
 #productos {
     margin-top: 70px;
     display: grid;
@@ -171,8 +177,11 @@ section h1 span { /* numero de elementos*/
     gap: 100px;
 }
 
-.product {
-    border: none;
+.producto {
+    border-bottom: 0.5px solid #7a72723b; /* Borde inferior */
+    border-right: 0.5px solid #7a72723b; /* Borde derecho */
+    box-shadow:  1px 1px #725b5b;
+    border-radius: 2px;
     margin: 10px;
     padding: 10px;
     width: 200px; 
@@ -184,6 +193,7 @@ section h1 span { /* numero de elementos*/
     white-space: nowrap;
     overflow: hidden;
     width: 250px;
+    font-size: 14px;
 }
 .producto .imagen {
     display: flex;
@@ -199,5 +209,28 @@ section h1 span { /* numero de elementos*/
 .precio {
     text-align: center;
     font-size: 16px;
+
 }
 
+footer {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: inherit;
+    background: url(./img/background.jpg);
+    background-position: bottom right; 
+    background-size: cover;
+
+}
+
+.footer img {
+    padding-top: 50px;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+}
