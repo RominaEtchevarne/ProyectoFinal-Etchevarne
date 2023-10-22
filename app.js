@@ -45,6 +45,8 @@ class BaseDeDatos {
 
 }
 
+
+
 class Carrito{
     constructor(){
         
@@ -55,6 +57,8 @@ class Carrito{
         this.listar();
     }
     
+
+
 
     estaEnCarrito({id}){
         return this.carrito.find((producto) => producto.id === id);
@@ -90,7 +94,9 @@ class Carrito{
     vaciar(){
         this.total = 0;
         this.cantidadProductos = 0;
-        this.carrito = []
+        this.carrito = [];
+        localStorage.setItem("carrito", JSON.stringify(this.carrito));
+        this.listar();
     }
 
     listar(){
@@ -250,6 +256,7 @@ botonComprar.addEventListener("click", (event)=> {
     }).then((result) =>{
         if (result.isConfirmed){
                 carrito.vaciar();
+                actualizarTotal();
         Swal.fire({
             title: "¡Compra realizada!",
             icon: "success",

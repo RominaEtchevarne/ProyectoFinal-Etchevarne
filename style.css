@@ -39,7 +39,7 @@
 #inputBuscar {
     width: 350px; 
     padding: 10px;
-    font-size: 18px; 
+    font-size: 20px; 
     border: 1px solid #835f5f; 
     border-radius: 50px; 
     outline: none; 
@@ -59,7 +59,7 @@
     padding: 5px;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 20px;
 }
 .fondo{
     background-color: #725b5b;
@@ -75,6 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .boton {
@@ -84,8 +85,8 @@
     padding: 10px;
     margin: 10px 0;
     cursor: pointer;
-    font-size: 16px;
-    margin-left: 14px;
+    font-size: 19px;
+    margin-left: 8px;
     backdrop-filter: blur(3px);
     border-radius: 25px;
 }
@@ -99,6 +100,7 @@
 .boton.seleccionado{
     border: 4px solid white;
 }
+
 
 .main { /* carteles de productos */
     width: 60%;
@@ -138,7 +140,8 @@ section h1 span { /* numero de elementos*/
     width: 30px;
     text-align: center;
     font-size: 16px;
-    margin: -10px 0 0 30px;
+    margin-left: 40px;
+    color: #725b5b;
 }
 
 .productoCarrito {
@@ -178,14 +181,14 @@ section h1 span { /* numero de elementos*/
 }
 
 .producto {
-    border-bottom: 0.5px solid #7a72723b; /* Borde inferior */
-    border-right: 0.5px solid #7a72723b; /* Borde derecho */
-    box-shadow:  1px 1px #725b5b;
-    border-radius: 2px;
+
     margin: 10px;
     padding: 10px;
     width: 200px; 
     text-align: center; 
+}
+.producto:hover {
+    scale: 1.05;
 }
 
 .producto h2 {
@@ -193,7 +196,7 @@ section h1 span { /* numero de elementos*/
     white-space: nowrap;
     overflow: hidden;
     width: 250px;
-    font-size: 14px;
+    font-size: 20px;
 }
 .producto .imagen {
     display: flex;
@@ -208,29 +211,25 @@ section h1 span { /* numero de elementos*/
 
 .precio {
     text-align: center;
-    font-size: 16px;
-
+    font-size: 20px;
+}
+.border-top {
+    border-top: 2px solid #9B9B9B;
+    margin-bottom: 30px;
+    width: 90%;
+    margin-left: 80px;
 }
 
-footer {
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    position: inherit;
-    background: url(./img/background.jpg);
-    background-position: bottom right; 
-    background-size: cover;
-
-}
-
-.footer img {
-    padding-top: 50px;
-}
 .redes{
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    margin-right: 80px;
+    gap: 20px;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
